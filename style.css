@@ -14,7 +14,7 @@ body {
 
 nav ul,
 nav il {
-	display: contents; /* step 2.1 */
+	display: contents;
 }
 
 nav {
@@ -66,7 +66,7 @@ label {
 form {
 	display: grid;
 	grid-template-columns: auto 1fr;
-	gap: 1em;
+	gap: 0.3em;
 }
 
 form label {
@@ -75,48 +75,48 @@ form label {
 }
 
 #button, label{
-	grid-column: 1 / -1; /*step 3.3 part 2*/
+	grid-column: 1 / -1;
 }
 
 img{
-	max-width: 100%; /*step 4.2*/
+	max-width: 100%;
 }
 
 .projects {
-	display:grid; /*step 4.3*/
-	grid-template-columns : repeat(auto-fill, minmax(15em, 1fr));/*step 4.3*/
-	min-width: 15em; /*step 4.3*/
-	max-width: 1fr; /*step 4.3*/
+	display:grid;
+	grid-template-columns : repeat(auto-fill, minmax(15em, 1fr));
+	min-width: 15em;
+	max-width: 1fr;
 }
 
 article{
-	margin: 10px; /*step 4.3*/
-	display: grid; /*step 4.4*/
-	grid-template-rows: subgrid; /*step 4.4*/
-	grid-row: span 3; /*step 4.4*/
+	margin: 10px;
+	display: grid;
+	grid-template-rows: subgrid;
+	grid-row: span 3;
 }
 
 article h2{
-	margin: 0; /*step 4.4*/
+	margin: 0;
 }
 
 h1 {
-	font-size: 200%; /*step 4.5*/
+	font-size: 200%;
 }
 
 h1, h2, h3, h4, h5, h6{
-	line-height: 1.1; /*step 4.5*/
-	text-wrap: balance; /*step 4.5*/
+	line-height: 1.1;
+	text-wrap: balance;
 }
 
 .curriculum{
-	display: grid; /*step 5 free*/
-	grid-template-columns: repeat(2, 1fr); /*step 5 free*/
-	min-width: 25em; /*step 5 free*/
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	min-width: 25em;
 }
 
 header{
-	background-color: var(--color-header-bg); /*step 5 free*/
-	font-weight: bold; /*step 5 free*/
-	text-transform: uppercase; /*step 5 free*/
+	background-color: var(--color-header-bg);
+	font-weight: bold;
+	text-transform: uppercase;
 } 
