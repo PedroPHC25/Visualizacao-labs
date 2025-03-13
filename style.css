@@ -5,6 +5,10 @@
 	--color-header-bg: oklch(72.5% 0.0715 202 / 50%);
 }
 
+html {
+	color-scheme: light;
+}
+
 body {
 	max-width: 100ch;
 	margin-inline: auto;
