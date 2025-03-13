@@ -1,7 +1,8 @@
 :root {
-	--grey: oklch(80% 3% 200);
-	--white: #ffffff;
-	--color-accent: oklch(65% 50% 0);
+    --color-accent: oklch(65% 50% 0);
+    --border-gray: oklch(80% 3% 200);
+	--border-blue: oklch(70% 0.1 202);
+	--color-header-bg: oklch(72.5% 0.0715 202 / 50%);
 }
 
 body {
@@ -11,11 +12,17 @@ body {
 	font: 100%/1.5 system-ui;
 }
 
+nav ul,
+nav il {
+	display: contents; /* step 2.1 */
+}
+
 nav {
 	display: flex;
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
-	border-bottom-color: var(--grey);
+	border-bottom-color:oklch(80% 3% 200);
+	margin-bottom: 1em;
 }
 
 nav a {
@@ -27,15 +34,15 @@ nav a {
 }
 
 nav .current {
-	border-bottom-width: 5px;
+	border-bottom-width: 0.4em;
 	border-bottom-style: solid;
-	border-bottom-color: var(--grey);
+	border-bottom-color: oklch(80% 3% 200);
 	padding: -0.1em;
 	font-weight: bold;
 }
 
 nav a:hover {
-	border-bottom-width: 5px;
+	border-bottom-width: 0.4em;
 	border-bottom-style: solid;
 	border-bottom-color: var(--color-accent);
 	background-color: oklch(from var(--color-accent) h h h / 10%);
@@ -67,6 +74,49 @@ form label {
 	grid-template-columns: subgrid;
 }
 
-label, button {
-	grid-column: 1 / -1;
+#button, label{
+	grid-column: 1 / -1; /*step 3.3 part 2*/
 }
+
+img{
+	max-width: 100%; /*step 4.2*/
+}
+
+.projects {
+	display:grid; /*step 4.3*/
+	grid-template-columns : repeat(auto-fill, minmax(15em, 1fr));/*step 4.3*/
+	min-width: 15em; /*step 4.3*/
+	max-width: 1fr; /*step 4.3*/
+}
+
+article{
+	margin: 10px; /*step 4.3*/
+	display: grid; /*step 4.4*/
+	grid-template-rows: subgrid; /*step 4.4*/
+	grid-row: span 3; /*step 4.4*/
+}
+
+article h2{
+	margin: 0; /*step 4.4*/
+}
+
+h1 {
+	font-size: 200%; /*step 4.5*/
+}
+
+h1, h2, h3, h4, h5, h6{
+	line-height: 1.1; /*step 4.5*/
+	text-wrap: balance; /*step 4.5*/
+}
+
+.curriculum{
+	display: grid; /*step 5 free*/
+	grid-template-columns: repeat(2, 1fr); /*step 5 free*/
+	min-width: 25em; /*step 5 free*/
+}
+
+header{
+	background-color: var(--color-header-bg); /*step 5 free*/
+	font-weight: bold; /*step 5 free*/
+	text-transform: uppercase; /*step 5 free*/
+} 
